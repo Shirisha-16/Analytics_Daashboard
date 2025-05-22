@@ -216,6 +216,7 @@ This project showcases **best practices in frontend development**, including:
 
 ✔️ **Unit & E2E testing for reliability**  
 
+![Screenshot 2025-05-22 191741](https://github.com/user-attachments/assets/98bb24c7-687d-4ce8-9ec9-7bd28e868660)
 
 
 
