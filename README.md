@@ -204,11 +204,16 @@ yarn e2e
 The **PGAGI Analytics Dashboard** is a high-performance, scalable, and user-friendly web application that seamlessly integrates real-time weather, news, and financial data. With robust user authentication powered by NextAuth.js (supporting credentials, Google, and GitHub logins), drag-and-drop functionality, dark mode, and smooth animations (Framer Motion), it provides an engaging and interactive experience. The dynamic page backgrounds based on weather conditions add a unique visual flair. 
 
 This project showcases **best practices in frontend development**, including:  
-✔️ **State management with Redux Toolkit & React Query**  
+✔️ **State management with Redux Toolkit & React Query** 
+
 ✔️ **Advanced UI/UX with Tailwind CSS & Framer Motion**
+
 ✔️ **Secure user authentication with NextAuth.js and integrated MongoDB/Prisma ORM**
+
 ✔️ **Robust form validation with React Hook Form & Zod**
-✔️ **Error handling & API optimizations**  
+
+✔️ **Error handling & API optimizations**
+
 ✔️ **Unit & E2E testing for reliability**  
 
 
