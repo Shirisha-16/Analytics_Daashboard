@@ -217,6 +217,12 @@ This project showcases **best practices in frontend development**, including:
 ✔️ **Unit & E2E testing for reliability**  
 
 ![Screenshot 2025-05-22 191741](https://github.com/user-attachments/assets/98bb24c7-687d-4ce8-9ec9-7bd28e868660) ![Screenshot 2025-05-22 194130](https://github.com/user-attachments/assets/364c4c09-0a87-4a26-9d9d-54cc313e749b) ![Screenshot 2025-05-22 191802](https://github.com/user-attachments/assets/6ed2d9a8-652a-4dcf-b7da-f9f540656b0f)
+![Screenshot 2025-05-22 191858](https://github.com/user-attachments/assets/837ab5d0-200a-4686-8c7d-a4427a6337b4) ![Screenshot 2025-05-22 191925](https://github.com/user-attachments/assets/adf61c46-8fc2-4917-82b1-2070c00e93a6) ![Screenshot 2025-05-22 192008](https://github.com/user-attachments/assets/f6094814-0b8e-4d10-bc0c-252be4950869)
+![Screenshot 2025-05-22 192034](https://github.com/user-attachments/assets/f9c9d263-4a7e-4a47-b6cc-99935630c5cf) ![Screenshot 2025-05-22 192102](https://github.com/user-attachments/assets/3f7b9da4-ac38-4b48-820a-ce35b03e3f25) ![Screenshot 2025-05-22 192212](https://github.com/user-attachments/assets/f6eac1fb-cdf3-4620-baa9-22640f17a068)
+
+
+
+
 
 
 
