@@ -1,7 +1,7 @@
 # **PGAGI Analytics Dashboard**  
 
 ## **1. Project Overview**  
-The **PGAGI Analytics Dashboard** is a **comprehensive web application** designed to **fetch, process, and display real-time data** from multiple APIs. Built using **Next.js, TypeScript, and Tailwind CSS**, it provides an **interactive user experience** with advanced features like **drag-and-drop customization, dark mode, smooth animations, and error handling**.  
+The **PGAGI Analytics Dashboard** is a **comprehensive web application** designed to **fetch, process, and display real-time data** from multiple APIs. Built using **Next.js, TypeScript, and Tailwind CSS**, it provides an **interactive user experience** with advanced features like **drag-and-drop customization, dark mode, smooth animations, and error handling**. It features **robust user authentication powered by NextAuth.js**,supporting both **credentials (email/password) and OAuth logins (Google, GitHub)**.The backend is seamlessly integrated with **MongoDB using Prisma ORM**,ensuring type-safe and efficient data management. A unique visual flair is added by its **dynamic page backgrounds, which change based on real-time weather conditions**.For a refined user interface,**Shadcn UI components** are utilized, and **React Hook Form with Zod** ensures robust form validation.
 
 This dashboard is developed to help users **track weather forecasts, news updates, and financial stock market data** in an intuitive and visually appealing interface.  
 
@@ -9,20 +9,34 @@ This dashboard is developed to help users **track weather forecasts, news update
 
 ## **2. Key Features**  
 🔹 **Weather, News, and Stock Data Fetching** – Integrates **OpenWeather API, NewsAPI, and Alpha Vantage API** to fetch real-time updates.
+
 🔹 **Secure Authentication System** - It allows users to signup,login using **NextAuth**.
+
 🔹 **Google OAuth Integration** - signin/signup via using Google accounts via **Nextjs**.
+
 🔹 **Form Validation** - client-side form validation using **ReactHook form** and **zod**.
+
 🔹 **Database Integration** - persistent user data storage using **Mongodb** via **Prisma ORM**.
+
 🔹 **Protect sensitive routes and data, ensuring only authenticated users can access dashboard**.
-🔹 **Drag-and-Drop Widget Customization** – Users can rearrange dashboard elements using **react-beautiful-dnd**.  
+
+🔹 **Drag-and-Drop Widget Customization** – Users can rearrange dashboard elements using **react-beautiful-dnd**. 
+
 🔹 **Dark Mode Toggle** – A built-in dark mode feature for a **better viewing experience**.
+
 🔹 **Home page image varies with mode(dark or light)- This is my favourite feature.
+
 🔹 **Dynamic weather Background** - page background changes dynamically based on weather conditions(sunny,rainy,cloudy,etc).
-🔹 **Performance Optimization** – Implemented **lazy loading, code splitting, and caching** for **faster performance**.  
-🔹 **Smooth Animations** – Integrated **Framer Motion** for **interactive UI transitions**.  
-🔹 **Error Handling & API Fallbacks** – Ensures a **seamless experience** even when APIs fail.  
-🔹 **Unit & E2E Testing** – Thoroughly tested using **Jest & Cypress** for **reliability and robustness**.  
-🔹 **Live Deployment on Vercel** – Hosted at ****.  
+
+🔹 **Performance Optimization** – Implemented **lazy loading, code splitting, and caching** for **faster performance**. 
+
+🔹 **Smooth Animations** – Integrated **Framer Motion** for **interactive UI transitions**.
+
+🔹 **Error Handling & API Fallbacks** – Ensures a **seamless experience** even when APIs fail.
+
+🔹 **Unit & E2E Testing** – Thoroughly tested using **Jest & Cypress** for **reliability and robustness**.
+
+🔹 **Live Deployment on Vercel** – Hosted at **https://analytics-daashboard-2e3l-chm5eluat-tyara-shirishas-projects.vercel.app/**.  
 
 ---
 
@@ -98,7 +112,7 @@ The project was developed using modern web technologies:
 
 ### **Clone the Repository**  
 ```bash
-git clone https://github.com/Vishnu-000/pgagi-analytics-dashboard.git
+git clone https://github.com/Shirisha-16/Analytics_Daashboard.git
 cd pgagi-analytics-dashboard
 ```
 
@@ -119,7 +133,7 @@ NEXTAUTH_SECRET="your_nextauth_secret_key"
 
 # MongoDB Database URL (from MongoDB Atlas or your local instance)
 # Ensure you replace <db_password> with your actual password and <database_name> with your chosen database name.
-DATABASE_URL="mongodb+srv://tyarlashirisha:<db_password>@cluster0.vdwb83l.mongodb.net/<database_name>?retryWrites=true&w=majority&appName=Cluster0"
+DATABASE_URL="mongodb+srv://<username>:<db_password>@cluster0.vdwb83l.mongodb.net/<database_name>?retryWrites=true&w=majority&appName=Cluster0"
 
 # Google OAuth
 GOOGLE_CLIENT_ID="your_google_client_id"
@@ -129,6 +143,26 @@ GOOGLE_CLIENT_SECRET="your_google_client_secret"
 GITHUB_CLIENT_ID="your_github_client_id"
 GITHUB_CLIENT_SECRET="your_github_client_secret"
 
+```
+###**Prisma Setup**
+Update your Prisma schema to use MongoDB and then generate the Prisma client and push the schema to your database.
+
+Open **prisma/schema.prisma** and ensure your datasource db block looks like this:
+prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+### **After updating prisma/schema.prisma**, run:
+
+```bash
+yarn prisma generate
+yarn prisma db push
 ```
 
 ### **Run the Application**  
@@ -148,29 +182,32 @@ yarn e2e
 ```
 
 ### **Live Deployment on Vercel**  
- 
+[**PGAGI Analytics Dashboard**](https://analytics-daashboard-2e3l-chm5eluat-tyara-shirishas-projects.vercel.app/)  
 
 ---
 
 ## **6. Project Folder Structure**  
 ```
+/app           # Next.js App Router (contains pages, API routes, and layouts)
 /components    # Reusable UI components
-/pages         # Next.js pages
 /store         # Redux state management
 /hooks         # Custom hooks
 /services      # API integrations
 /utils         # Utility functions
+/prisma        # Prisma schema and migrations
 /tests         # Unit & E2E tests
 ```
 
 ---
 
 ## **7. Conclusion**  
-The **PGAGI Analytics Dashboard** is a **high-performance, scalable, and user-friendly web application** that seamlessly integrates **real-time weather, news, and financial data**. With **drag-and-drop functionality, dark mode, and smooth animations**, it provides an **engaging and interactive experience**.  
+The **PGAGI Analytics Dashboard** is a high-performance, scalable, and user-friendly web application that seamlessly integrates real-time weather, news, and financial data. With robust user authentication powered by NextAuth.js (supporting credentials, Google, and GitHub logins), drag-and-drop functionality, dark mode, and smooth animations (Framer Motion), it provides an engaging and interactive experience. The dynamic page backgrounds based on weather conditions add a unique visual flair. 
 
 This project showcases **best practices in frontend development**, including:  
 ✔️ **State management with Redux Toolkit & React Query**  
-✔️ **Advanced UI/UX with Tailwind CSS & Framer Motion**  
+✔️ **Advanced UI/UX with Tailwind CSS & Framer Motion**
+✔️ **Secure user authentication with NextAuth.js and integrated MongoDB/Prisma ORM**
+✔️ **Robust form validation with React Hook Form & Zod**
 ✔️ **Error handling & API optimizations**  
 ✔️ **Unit & E2E testing for reliability**  
 
